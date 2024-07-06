@@ -99,7 +99,7 @@ drawMap({
 // script.js
 document.getElementById('downloadBtn').addEventListener('click', function () {
     // URL of the PDF file you want to download
-    var pdfUrl = 'Vasile_Dan_CV_2024 (1).pdf';
+    var pdfUrl = 'static/cv.pdf';
 
     // Create a temporary link element
     var link = document.createElement('a');

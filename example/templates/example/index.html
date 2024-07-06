@@ -16,10 +16,10 @@
 
 <body>
     <div class="navbar">
-        <a href="#">Home</a>
+        <a href="{% url 'home' %}">Home</a>
         <a href="#">Projects</a>
         <a href="#">About</a>
-        <a href="cv.html">Resume</a>
+        <a href="{% url 'cv' %}">Resume</a>
     </div>
     <div class="containerquote">
         <div class="text">
@@ -56,9 +56,9 @@
         </div>
 
         <div class="icons">
-            <img src="./data/github.png" alt="GitHub">
-            <img src="./data/gmail.png" alt="Gmail">
-            <img src="./data/linkedin.png" alt="LinkedIn">
+            <a href="https://github.com/moonspaish" ><img src={% static '/data/github.png' %}. alt="GitHub"></a>
+            <a href="mailto:danvas011@gmail.com" ><img src={% static '/data/gmail.png' %} alt="Gmail"></a>
+            <a href="https://www.linkedin.com/in/dan-vasile-5279b31ba/" ><img src={% static '/data/linkedin.png' %} alt="LinkedIn"></a>
         </div>
     </div>
 </body>

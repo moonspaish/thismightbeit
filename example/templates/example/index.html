@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3-legend.susielu.com/d3-legend.min.js"></script>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">About</a>
+        <a href="cv.html">Resume</a>
+    </div>
+    <div class="containerquote">
+        <div class="text">
+            <p class="quote">The way you treat people is what they become.<button id="downloadBtn">Download
+                    Resume</button></p>
+            <p class="author">- Johann Wolfgang von Goethe</p>
+        </div>
+        <div id="map"></div>
+    </div>
+    <div class="containerflag">
+        <div id="map2"></div>
+        <div class="text">
+            <p class="quote"> My name is Vasile Dan. I
+                graduated in 2023 with a
+                Bachelor's Degree in
+                Computer Science and
+                Economics. This website
+                is meant to show my love
+                for design and to
+                showcase my abilities.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-section">
+            <h1>You can contact me</h1>
+            <p>by email at: <a href="mailto:danvas011@gmail.com">danvas011@gmail.com</a></p>
+        </div>
+
+        <div class="circles">
+            <div class="circle big red"></div>
+            <div class="circle medium orange"></div>
+            <div class="circle small orange"></div>
+            <div class="circle small blue"></div>
+        </div>
+
+        <div class="icons">
+            <img src="./data/github.png" alt="GitHub">
+            <img src="./data/gmail.png" alt="Gmail">
+            <img src="./data/linkedin.png" alt="LinkedIn">
+        </div>
+    </div>
+</body>
+<script src="{% static 'script.js' %}"></script>
+
+</html>

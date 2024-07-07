@@ -9,7 +9,7 @@ function drawMap({
     geoJsonUrl,        // URL of the GeoJSON data
     colormaps,         // Object defining custom color scales for parties
     strokeColor = "white", // Optional: stroke color for the county borders
-    strokeWidth = 0.2      // Optional: stroke width for the county borders
+    strokeWidth = 0.0      // Optional: stroke width for the county borders
 }) {
     // Select the container and append an SVG element
     const svg = d3.select(containerId)

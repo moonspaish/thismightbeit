@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Example</title>
+    <title>Dan's website :)</title>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 
@@ -22,10 +22,14 @@
         <a href="{% url 'cv' %}">Resume</a>
     </div>
     <div class="containerquote">
-        <div class="text">
-            <p class="quote">The way you treat people is what they become.<button id="downloadBtn">Download
-                    Resume</button></p>
-            <p class="author">- Johann Wolfgang von Goethe</p>
+        <div class="buttonandtext">
+            <div class="text">
+                <p class="quote">The way you treat people is what they become.</p>
+            </div>
+            <div class="buttons">
+                <button id="downloadBtn">Download Resume</button>
+                <a href="{% url 'cv' %}"><button id="downloadBtn">See Resume</button></a>
+            </div>
         </div>
         <div id="map"></div>
     </div>

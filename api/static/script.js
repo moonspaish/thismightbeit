@@ -9,7 +9,8 @@ function drawMap({
     geoJsonUrl,        // URL of the GeoJSON data
     colormaps,         // Object defining custom color scales for parties
     strokeColor = "white", // Optional: stroke color for the county borders
-    strokeWidth = 0.2      // Optional: stroke width for the county borders
+    strokeWidth = 0.2,     // Optional: stroke width for the county borders
+    legendScale = 0.7
 }) {
     // Select the container and append an SVG element
     const svg = d3.select(containerId)
@@ -65,7 +66,7 @@ function drawMap({
             // Append a group element for the legend and position it
             svg.append("g")
                 .attr("class", "legend")
-                .attr("transform", `translate(${10}, ${height - (100 * (index + 1))})`) // Position legend
+                .attr("transform", `translate(${10}, ${height - (100 * (index + 1))}) scale(${legendScale})`) // Position legend
                 .call(legend);
         });
     }).catch(function (error) {
@@ -79,10 +80,10 @@ const customColormaps = {
     'Vasilica-Viorica Dancilă': d3.scaleQuantize().domain([0, 100]).range(['#ee2b31', '#d41118', '#a50d13', '#760a0d', '#470608']),
     'Hunor Kelemen': d3.scaleQuantize().domain([0, 100]).range(['#5bbd6b', '#42a452', '#337f40', '#255b2d', '#16371b']),
 };
-
+width1 = document.querySelector("#map").clientWidth;
 drawMap({
     containerId: "#map",
-    width: 1300,
+    width: width1,
     height: 600,
     geoJsonUrl: "https://raw.githubusercontent.com/moonspaish/simplified/main/uat.geojson",
     colormaps: customColormaps
@@ -90,12 +91,11 @@ drawMap({
 
 drawMap({
     containerId: "#map2",
-    width: 1300,
+    width: width1,
     height: 600,
     geoJsonUrl: "https://raw.githubusercontent.com/moonspaish/simplified/main/county.geojson",
     colormaps: customColormaps
 });
-
 // script.js
 document.getElementById('downloadBtn').addEventListener('click', function () {
     // URL of the PDF file you want to download
@@ -116,4 +116,26 @@ document.getElementById('downloadBtn').addEventListener('click', function () {
 
     // Remove the link from the document
     document.body.removeChild(link);
+});
+function myFunction() {
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+}
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.querySelector('.toggle-button');
+    const navbarLinks = document.querySelector('.navbar-links');
+
+    toggleButton.addEventListener('click', function () {
+        navbarLinks.classList.toggle('active');
+    });
 });

@@ -91,8 +91,8 @@ body {
 
 .containerquote {
     display: grid;
-    grid-template-rows: repeat(1, 700px);
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 700px;
+    grid-template-columns: repeat(auto-fit, minmax(344px, 1fr));
 }
 
 .containerquote .mainpart {
@@ -333,9 +333,7 @@ body {
 
 @media (max-width: 768px) {
     .containerquote {
-        display: grid;
-        grid-template-rows: repeat(1, 550px);
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: 550px;
     }
 
     .footer a img {
@@ -346,9 +344,7 @@ body {
 
 @media (max-width: 470px) {
     .containerquote {
-        display: grid;
-        grid-template-rows: repeat(1, 600px);
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: 600px;
     }
 
     .footer a img {

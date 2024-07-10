@@ -129,7 +129,7 @@ function myFunction() {
 
 function outFunc() {
     var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copy to clipboard";
+    tooltip.innerHTML = "Copied to clipboard";
 }
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.querySelector('.toggle-button');

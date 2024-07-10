@@ -324,12 +324,30 @@ body {
     max-width: 300px;
 }
 
-/* @media (max-width: 1000px) {
-} */
+@media (max-width: 1470px) {
+    .footer a img {
+        min-width: 50px;
+        max-width: 160px;
+    }
+}
+
 @media (max-width: 768px) {
     .containerquote {
         display: grid;
         grid-template-rows: repeat(1, 550px);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .footer a img {
+        min-width: 50px;
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 470px) {
+    .containerquote {
+        display: grid;
+        grid-template-rows: repeat(1, 600px);
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 

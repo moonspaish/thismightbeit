@@ -5,23 +5,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <title>Dan's website :)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'cvstyle.css' %}">
 </head>
-
 <body>
     <div class="navbar">
-        <a href="{% url 'home' %}">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">About</a>
-        <a href="{% url 'cv' %}">Resume</a>
-    </div>
-    <section id="cv-section">
-        <div class="pdf-container">
-            <iframe src="{% static 'cv.pdf' %}#zoom=130" width="100%" height="1000px"></iframe>
+        <button class="toggle-button">☰</button>
+        <div class="navbar-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">About</a>
+            <a href={% url 'cv' %}>Resume</a>
         </div>
-    </section>
-    <script src="script.js"></script>
+    </div>
+    <div class="cvjpg">
+        <img src="{% static "data/cvpage1.jpg" %}" alt="">
+        <img src="{% static "data/cvpage2.jpg" %}" alt="">
+    </div>
+    
 </body>
-
+<script src="{% static 'script2.js' %}"></script>
 </html>
